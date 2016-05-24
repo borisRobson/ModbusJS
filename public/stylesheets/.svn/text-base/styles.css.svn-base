@@ -1,0 +1,43 @@
+﻿ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+	}
+
+	ul li {
+		padding:16px;
+		border-bottom: 1px solid #ddd;
+	}
+
+	ul li:last-child {
+		border-bottom: none
+	}
+
+.isActive {
+    background-color: lightgreen;
+}
+
+#jumbo {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+#commands {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    margin-top: 20px;
+}
+
+#nav {
+    background-color: #696969;
+    color: white;
+}
+
+#dev {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}

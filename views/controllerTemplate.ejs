@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://www.paxton.co.uk/home.asp">Paxton Home</a>
+            </div>
+        </div>
+    </nav>
+
+	<div class="row" id="connection">
+		<div class="col-md-2 col-md-offset-1">
+			<label for="ipAddr">IP Address:</label>
+			<input class="form-control" id="ipAddr" type="text"/>
+		</div>
+		<div class="col-md-2 col-md-offset-1">
+			<label for="mbusLow">From Modbus Address (1 - 255):</label>
+			<input class="form-control" id="mbusLow" type="text"/>
+		</div>
+		<div class="col-md-1 ">
+			<label for="mbusHigh">To:</label>
+			<input class="form-control" id="mbusHigh" type="text"/>
+		</div>
+		<div class="col-md-2 col-md-offset-1">
+			<br/>
+			<button class="form-control" id="discover" type="button">Discover Devices</button>
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		<div class="jumbotron col-md-4" id="devices">
+			<h3>Devices Discovered:</h3>
+			<div class="list-group" id="devices">
+				<a href="" class="list-group-item">Dev1</a>
+				<a href="" class="list-group-item">Dev2</a>
+				<a href="" class="list-group-item">Dev2</a>
+			</div>
+			<label for="assignName">Rename Device:</label>
+			<input class="form-control" id="assignName" type="text" />
+			<br/>
+			<button type="button" id="btnAssign">Assign Name</button>
+		</div>
+		<div class="jumbotron col-md-7 col-md-offset-1">
+			<h2>Outputs :</h2>
+			<div class="=row" id="outputs">
+				<div class="col-md-2">
+					<p>Output 1</p>
+					<img src="/images/outputOff.jpg" id="out1" class="img-rounded" alt="Off" width="125" height="125"/>
+				</div>
+				<div class="col-md-2 col-md-offset-1">
+					<p>Output 2</p>
+					<img src="/images/outputOff.jpg" id="out2" class="img-rounded" alt="Off" width="125" height="125"/>
+				</div>
+				<div class="col-md-2 col-md-offset-1">
+					<p>Output 3</p>
+					<img src="/images/outputOff.jpg" id="out3" class="img-rounded" alt="Off" width="125" height="125" />
+				</div>
+				<div class="col-md-2 col-md-offset-1">
+					<p>Output 4</p>
+					<img src="/images/outputOff.jpg" id="out4" class="img-rounded" alt="Off" width="125" height="125" />
+				</div>
+			</div>
+		</div>			
+		<div class="jumbotron col-md-7 col-md-offset-1">
+			<h2>Inputs :</h2>
+			<div class="=row" id="inputs">
+				<div class="col-md-2">
+					<p>Input 1</p>
+					<img src="/images/outputOff.jpg" id="in1" class="img-rounded" alt="Off" width="125" height="125" />
+				</div>
+				<div class="col-md-2 col-md-offset-1">
+					<p>Input 2</p>
+					<img src="/images/outputOff.jpg" id="in2" class="img-rounded" alt="Off" width="125" height="125" />
+				</div>
+				<div class="col-md-2 col-md-offset-1">
+					<p>Input 3</p>
+					<img src="/images/outputOff.jpg" id="in3" class="img-rounded" alt="Off" width="125" height="125" />
+				</div>
+				<div class="col-md-2 col-md-offset-1">
+					<p>Input 4</p>
+					<img src="/images/outputOff.jpg" id="in4" class="img-rounded" alt="Off" width="125" height="125" />
+				</div>
+			</div>
+		</div>
+		<div class="jumbotron col-md-8 col-md-offset-5">
+			<div class="row" id="commands">
+				<button type="button" class="col-md-2 col-md-offest-1" id="readInputs">Read Inputs</button>
+				<button type="button" class="col-md-2 col-md-offset-1" id="setOutputs">Set Outputs</button>
+				<button type="button" class="col-md-2 col-md-offset-1" id="liveConnect">Live Connection</button>
+			</div>
+		</div>		
+	</div>
+	<% include partials/scripts.ejs %>
+</body>
+
+
+
+
+
+
+
+
+</html>

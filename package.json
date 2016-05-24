@@ -1,0 +1,15 @@
+{
+  "name": "Modbusjs",
+  "version": "0.0.0",
+  "description": "Modbusjs",
+  "main": "server.js",
+  "author": {
+    "name": "Brandon RobsonClarke"
+  },
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "latest",
+    "modbus-stack": "^0.2.1",
+    "socket.io": "^1.4.5"
+  }
+}

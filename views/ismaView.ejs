@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <% include partials/head.ejs %>	
+</head>
+
+<body>
+    <% include partials/nav.ejs %>
+	<link rel='stylesheet' href='/stylesheets/styles.css'/>
+
+	<div class="row" id="connection">
+		<div class="col-md-2 col-md-offset-1">
+			<label for="ipAddr">IP Address:</label>
+			<input class="form-control" id="ipAddr" type="text"/>
+		</div>
+		<div class="col-md-2 col-md-offset-1">
+			<label for="mask">Subnet Mask: (optional)</label>
+			<input class="form-control" id="mask" type="text"/>
+		</div>
+		<div class="col-md-2 col-md-offset-1">
+			<label for="gateway">Gateway: (optional)</label>
+			<input class="form-control" id="gateway" type="text"/>
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		<div class="jumbotron col-md-4" id="jumbo">
+			<h3>Devices :</h3>
+			<div class="list-group" >
+				<ul id="devices" class="devices">
+					<!--<li><a href="#" class="list-group-item">Dev1</a></li>
+					<li><a href="#" class="list-group-item">Dev2</a></li>
+					<li><a href="#" class="list-group-item">Dev3</a></li>-->
+				</ul>
+			</div>
+			<h3>Device Management:</h3>
+			<div class="row" id="dev">
+				<label for="devNum">Device Number:</label>
+				<input class="form-control" id="devNum" type="text" />	
+				<label for="devName">Device Name:</label>
+				<input class="form-control" id="devName" type="text" />
+			</div>
+			<br/>
+			<button type="button" class="col-md-4 col-md-offset-1 btn btn-default" id="btnAdd">Add Device</button>
+			<button type="button" class="col-md-4 col-md-offset-1 btn btn-default" id="btnRemove">Remove Device</button>
+		</div>
+		<div class="io">
+			<div class="jumbotron col-md-7 col-md-offset-1" id="jumbo">
+				<h2>Outputs :</h2>
+				<div class="=row" id="outputs">
+					<div class="col-md-2">
+						<p>Output 1</p>
+						<span style="font-size:5em; color:black" class="glyphicon glyphicon-off" id="out1" ></span>
+					</div>
+					<div class="col-md-2 col-md-offset-1">
+						<p>Output 2</p>
+						<span style="font-size:5em; color:black" class="glyphicon glyphicon-off" id="out2" ></span>
+					</div>
+					<div class="col-md-2 col-md-offset-1">
+						<p>Output 3</p>
+						<span style="font-size:5em; color:black" class="glyphicon glyphicon-off" id="out3" ></span>
+					</div>
+					<div class="col-md-2 col-md-offset-1">
+						<p>Output 4</p>
+						<span style="font-size:5em; color:black" class="glyphicon glyphicon-off" id="out4" ></span>
+					</div>
+				</div>
+			</div>			
+			<div class="jumbotron col-md-7 col-md-offset-1" id="jumbo">
+				<h2>Inputs :</h2>
+				<div class="=row" id="inputs">
+					<div class="col-md-2">
+						<p>Input 4</p>
+						<span style="font-size:5em; color:black" class="glyphicon glyphicon-off" id="in4" ></span>
+					</div>
+					<div class="col-md-2 col-md-offset-1">
+						<p>Input 3</p>
+						<span style="font-size:5em; color:black" class="glyphicon glyphicon-off" id="in3" ></span>
+					</div>
+					<div class="col-md-2 col-md-offset-1">
+						<p>Input 2</p>
+						<span style="font-size:5em; color:black" class="glyphicon glyphicon-off" id="in2" ></span>
+					</div>				
+					<div class="col-md-2 col-md-offset-1">
+						<p>Input 1</p>					
+						<span style="font-size:5em; color:black" class="glyphicon glyphicon-off" id="in1" ></span>
+					</div>				
+				</div>
+			</div>
+		</div>
+		<div class="jumbotron col-md-7 col-md-offset-5" id="jumbo">
+			<div class="row" id="commands">
+				<button type="button" class="col-md-2 col-md-offset-1 btn btn-default" id="readInputs" onclick="readInputs()" >Read Inputs</button>
+				<button type="button" class="col-md-2 col-md-offset-1 btn btn-default" id="setOutputs" onclick="setOutputs()" >Set Outputs</button>
+				<button type="button" class="col-md-2 col-md-offset-1 btn btn-default"  id="liveConnect"  >Live Connection</button>
+			</div>
+		</div>		
+	</div>
+	<% include partials/scripts.ejs %>
+	<script src="/javascripts/ismaControl.js"/>
+	
+</body>
+
+<script>
+	
+</script>
+<style>
+	
+</style>
+
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+<% include partials/nav.ejs %>
+
+<div class="container-fluid col-md-4" id="selectView">
+    <h1>Select Configuration:</h1>
+    <div class="list-group">
+        <button type="button" class="list-group-item" id="rawInputView">Raw Input / Output</button>
+        <a href="/ismaView" class="btn list-group-item" role="button">Isma</a>
+        <button type="button" class="list-group-item" id="searchView">Search Configurations</button>
+        <button type="button" class="list-group-item" id="customView">Create Custom</button>
+    </div>
+</div>
+<% include partials/scripts.ejs %>
+</body>
+</html>
+
+
+
+
